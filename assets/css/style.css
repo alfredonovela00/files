@@ -1,0 +1,194 @@
+/* Gerais */
+::-webkit-scrollbar{
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-color: #0d0b2f;
+}
+
+#hero {
+    height: 100vh;
+    color: black;
+}
+
+#hero h1,
+p {
+    color: black;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-brand i {
+    margin-right: 5px;
+}
+
+
+
+
+
+/* Botão customizado */
+.btn-custom {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 12px 25px;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #7e36cc;
+    color: black;
+}
+
+/* Cards de vantagens */
+.advantages .card {
+    background-color: #1f1a48;
+    border: none;
+    transition: transform 0.3s;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 35px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card do Consultor de TI */
+.card-ti {
+    background: linear-gradient(135deg, #0D47A1, #512DA8);
+    color: white;
+
+}
+
+
+.card-body a {
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Card do Psicólogo */
+.card-psico {
+    background: linear-gradient(135deg, #CE93D8, #8E24AA);
+}
+
+
+.card-trainer {
+    background: linear-gradient(135deg, #FF7043, #FF5722);
+
+}
+
+.card-medico{
+    background: linear-gradient(135deg, #5BC0EB, #007BFF);
+}
+
+/* Conteúdo dentro do card ocupa o espaço restante */
+.features {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Botão sempre no final do card, mesmo que o conteúdo varie */
+.btn-custom {
+    align-self: center;
+}
+
+.advantages .card:hover {
+    transform: translateY(-5px);
+}
+
+.box-escolher {
+    background: white;
+}
+
+/* Planos */
+.pricing .card {
+    background-color: #1f1a48;
+    border: none;
+    border-radius: 16px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pricing .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(166, 79, 255, 0.2);
+}
+
+.price {
+    font-size: 2.5rem;
+    color: #a64fff;
+}
+
+/* Rodapé */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-decoration: none;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+}
+
+/* Efeito de Partículas */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 10% 20%, rgba(255, 0, 0, 0.3), transparent 50%),
+        radial-gradient(circle at 20% 10%, rgba(0, 255, 0, 0.3), transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 0, 255, 0.3), transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(255, 255, 0, 0.3), transparent 50%);
+    background-size: 400px 400px;
+    animation: particles 10s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes particles {
+    0% {
+        background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+
+    50% {
+        background-position: 400px 0, 0 400px, 400px 400px, 0 0;
+    }
+
+    100% {
+        background-position: 0 0, 400px 0, 0 400px, 400px 400px;
+    }
+}
